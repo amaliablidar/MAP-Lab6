@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5f70a0;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.LoginController">
+    <children>
+            <AnchorPane prefHeight="400.0" prefWidth="340.0" style="-fx-background-color: #5f70a0;">
+            <children>
+
+                <Label fx:id="Labelstudent" layoutX="122.0" layoutY="93.0" prefHeight="40.0" prefWidth="158.0" text="Login" textFill="#d6bb22">
+                    <font>
+                        <Font name="Times New Roman Italic" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lastNameLabel" layoutX="33.0" layoutY="147.0" text="Last name">
+                    <font>
+                        <Font name="Times New Roman" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="idTextLabel" layoutX="58.0" layoutY="232.0" text="ID">
+                    <font>
+                        <Font name="Times New Roman" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="firstNameTextLabel" layoutX="35.0" layoutY="190.0" text="First name">
+                    <font>
+                        <Font name="Times New Roman" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="lastNameTextField" layoutX="101.0" layoutY="144.0" prefHeight="11.0" prefWidth="124.0" />
+                <TextField fx:id="firstNameTextField" layoutX="101.0" layoutY="187.0" prefHeight="11.0" prefWidth="124.0" />
+                <TextField fx:id="idTextField" layoutX="101.0" layoutY="229.0" prefHeight="11.0" prefWidth="124.0" />
+                <Button fx:id="loginButton" layoutX="15.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="32.0" prefWidth="288.0" text="LogIn" />
+                <Label fx:id="loginMessageLabel" layoutX="45.0" layoutY="268.0" prefHeight="18.0" prefWidth="235.0" text="Invalid Input. Please try again" textFill="#d6bb22">
+                    <font>
+                        <Font name="Times New Roman" size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

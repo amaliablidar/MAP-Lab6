@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5f70a0;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.StudentController">
+    <children>
+        <VBox alignment="BASELINE_CENTER" layoutX="6.0" prefHeight="400.0" prefWidth="247.0" style="-fx-background-color: #5f70a0;">
+            <children>
+                <Label fx:id="Labelstudent" layoutX="100.0" layoutY="52.0" prefHeight="40.0" prefWidth="158.0" text="Student Menu" textFill="#d6bb22">
+                    <font>
+                        <Font name="Times New Roman Italic" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+            <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="40.0" prefWidth="246.0" text="Register" textFill="#d6bb22">
+                <font>
+                    <Font name="Times New Roman" size="16.0" />
+                </font>
+            </Button>
+            <Button fx:id="creditButton" mnemonicParsing="false" onAction="#setCreditPane" prefHeight="40.0" prefWidth="246.0" text="Credit score" textFill="#d6bb22">
+                <font>
+                    <Font name="Times New Roman" size="16.0" />
+                </font>
+            </Button>
+        </VBox>
+        <Pane fx:id="registerPane" layoutX="247.0" prefHeight="400.0" prefWidth="348.0" visible="false">
+            <children>
+                <Label layoutX="14.0" layoutY="14.0" text="StudentID">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="studentIDTextField" layoutX="89.0" layoutY="12.0" />
+                <Label layoutX="14.0" layoutY="45.0" text="CourseID">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="courseIDTextField" layoutX="89.0" layoutY="43.0" />
+                <TableView fx:id="tableViewCourse" layoutY="187.0" prefHeight="213.0" prefWidth="348.0">
+                    <columns>
+                        <TableColumn fx:id="Course" prefWidth="75.0" style="-fx-background-color: #f5f5f5;" text="Course" />
+                        <TableColumn fx:id="CourseId" prefWidth="75.0" style="-fx-background-color: #f5f5f5;" text="CourseID" />
+                        <TableColumn fx:id="Credits" prefWidth="115.99996948242188" style="-fx-background-color: #f5f5f5;" text="Credits" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="showCoursesButton" layoutX="4.0" layoutY="122.0" mnemonicParsing="false" onAction="#showCoursesButton" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: #5f70a0;" text="Show courses" textFill="#d6bb22">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="registerStudentButton" layoutX="174.0" layoutY="122.0" mnemonicParsing="false" onAction="#registerStudent" prefHeight="27.0" prefWidth="179.0" style="-fx-background-color: #5f70a0;" text="Register for course" textFill="#d6bb22">
+                    <font>
+                        <Font name="Times New Roman" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="messageLabelRegister" layoutX="52.0" layoutY="85.0" prefHeight="20.0" prefWidth="223.0" text="Successfully registered!" textFill="#d6bb22" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="creditPane" layoutX="247.0" prefHeight="400.0" prefWidth="348.0" visible="false">
+            <children>
+                <TableView fx:id="tableViewCredit" layoutY="142.0" prefHeight="259.0" prefWidth="348.0">
+                    <columns>
+                        <TableColumn fx:id="Name" prefWidth="75.0" style="-fx-background-color: #5f70a0;" text="Name" />
+                        <TableColumn fx:id="ID" prefWidth="75.0" style="-fx-background-color: #5f70a0;" text="ID" />
+                        <TableColumn fx:id="CreditsStud" prefWidth="115.99996948242188" style="-fx-background-color: #5f70a0;" text="Credits" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Label layoutX="14.0" layoutY="80.0" text="ID" textFill="#d6bb22">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button layoutX="208.0" layoutY="78.0" mnemonicParsing="false" onAction="#showCreditNr" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #5f70a0;" text="Search" textFill="#d6bb22" />
+                <TextField fx:id="studentIdTextFieldCredit" layoutX="37.0" layoutY="80.0" />
+            </children>
+        </Pane>
+    </children>
+
+</AnchorPane>
