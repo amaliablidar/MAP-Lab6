@@ -115,7 +115,7 @@ public class StudentController  implements Initializable {
         if(searchObject==null)
             messageLabelRegister.setText("Please try again");
         else
-            messageLabelRegister.setText("Data not found");
+            messageLabelRegister.setText("Data found");
 
     }
     /**
